@@ -1,0 +1,432 @@
+---
+
+---
+
+/*                       Imporieren von Untermenüs                            */
+/*----------------------------------------------------------------------------*/
+@import "imports/colors";
+@import "imports/breakpoints";   /* ??? */
+@import "imports/reset";         /* ??? */
+@import "imports/tachyons";
+@import "imports/images";
+@import "imports/topbar";        /* Formatierung für Logo und Navigationsmenü */
+@import "imports/gallery";
+@import "imports/card";          /* ??? */
+@import "imports/toc";           /* Inhaltsverzeichnis, hier nicht benötigt */
+
+/*                              Dokumentstruktur                              */
+/*============================================================================*/
+
+/*                             html Formatierung                              */
+/*----------------------------------------------------------------------------*/
+html {
+  font-size: 100%;
+  height: 100%;
+}
+
+/*               Kopfbereich für die einzelnen Seiten formatieren             */
+/*============================================================================*/
+.page-header {
+  padding: 5rem 2rem;                  /* Abstände innerhalb des Kopfes */
+  background-color: $color-white;      /* Hintergrundfarbe */
+  text-align: center;                  /* Textausrichtung */
+  @media (min-height: 600px) {         /* Anpassung an die Bildschirmgrößen */
+    padding-top: 1rem;                 /* Rand oben */
+    padding-bottom: 1rem;              /* Rand unten */
+  }
+  @media (min-height: 900px) {         /* Anpassung an die Bildschirmgrößen */
+    padding-top: 1.5rem;               /* Rand oben */
+    padding-bottom: 1.5rem;            /* Rand unten */
+  }
+}
+
+/*         Box für den Kopfbereich der einzelnen Seiten formatieren           */
+/*----------------------------------------------------------------------------*/
+.seitenkopf {
+  position: relative;                  /* Position der Textbox festlegen */
+  border: 2px solid #000000;           /* Rahmen  der Textbox festlegen*/
+  box-shadow:0px 8px 10px #000000;     /* Schlagschatten festlegen*/
+  border-radius: 20px 0px 20px 0px;    /* abgerundete Ecken */
+  -moz-border-radius: 20px 0px 20px 0px;
+  -webkit-border-radius: 20px 0px 20px 0px;
+  width: 90%;                          /* Breite der Box festlegen */
+  padding-top: auto;                   /* Abstände innerhalb der Box */
+  padding-bottom: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: auto;                    /* Abstände zu weiteren Elememten */
+  margin-bottom: auto;
+  margin-left:auto;
+  margin-right:auto;
+  @media (min-width: $medium) {        /* Anpassung an die Bildschirmgrößen */
+    max-width: 54rem;                  /* Breite */
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  @media (min-width: $large) {         /* Anpassung an die Bildschirmgrößen */
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  @media (min-width: $huge) {          /* Anpassung an die Bildschirmgrößen */
+    max-width: 64rem;                  /* Breite */
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+
+/*                      Formatierung des body-Elementes                       */
+/*============================================================================*/
+// GOAL: body and html should fill entire the entire viewport as a minimum
+/*html {
+    background: hotpink;
+}
+body {
+  background: lightblue;
+  margin: 0;
+}
+
+// NO - if viewport is greater than the content, the body does not fill the screen
+// default settings
+
+/*
+// NO - if content is greater than the viewport, body seems to only be the height of the viewport
+html, body {
+  height: 100%;
+}
+*/
+
+/*
+// NO - if viewport is greater than the content, the body does not fill the screen
+html {
+  min-height: 100%;
+}
+body {
+  height: 100%;
+}
+*/
+
+/*
+// NO - if viewport is greater than the content, the body does not fill the screen
+body {
+  height: 100%;
+}
+*/
+
+/*
+// NO - if viewport is greater than the content, the body does not fill the screen
+body {
+  min-height: 100%;
+}
+*/
+
+/*
+// NO - if viewport is greater than the content, the body does not fill the screen
+html {
+  height: 100%;
+}
+*/
+
+/*
+// NO - if viewport is greater than the content, the body does not fill the screen
+html {
+  min-height: 100%;
+}
+*/
+
+/*
+// YES - seems to be our winner
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+}
+*/
+body {
+  display: flex;                       /* Child-Elemente in Reihe */
+  flex-direction: column;              /* Reihe als Säule anordnen */
+  min-height: 100vh;                   /* Mindesthöhe Browswerfenster */
+/*height: 100%;*/
+  margin: 0;                           /* kein weißer Rand um body */
+  position:relative; /*REQUIRED Sets up positioning for your footer*/
+  padding: 0;
+  line-height: 1.5;
+  letter-spacing: 0.005em;
+  color: $color-grey;
+  background-color: blue;  /*$color-grey-06; */
+  font-family: "Calibri", Arial, Helvetica, sans-serif;
+
+  @media (min-width: $medium) {        /* Anpassung an die Bildschirmgrößen */
+    font-size: 1rem;
+  }
+  @media (min-width: $large) {         /* Anpassung an die Bildschirmgrößen */
+    font-size: 1.25rem;
+  }
+  @media (min-width: $huge) {          /* Anpassung an die Bildschirmgrößen */
+    font-size: 1.5rem;
+  }
+
+  /* Container formatieren */
+  .container {
+    max-width: 48rem; /* Breite */
+    /*height: 100%;  /*1rem;*/
+    margin: 0 auto; /* Abstand zum nächsten Element */
+    padding-left: 1rem;
+    padding-right: 1rem;
+    position: relative;
+        min-height: 100%;
+        /*width: 550px;*/
+        background-color: silver;
+
+    @media (min-width: $medium) {
+      max-width: 54rem; /* Breite */
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+    @media (min-width: $large) {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+    @media (min-width: $huge) {
+      max-width: 64rem; /* Breite */
+      padding-left: 5rem;
+      padding-right: 5rem;
+    }
+  }
+
+  .container--gallery {
+    max-width: 64rem; /* Breite */
+    position: relative;
+        min-height: 100%;
+        /*width: 550px;*/
+        background-color: silver;
+  }
+
+}
+
+/*          footer (Fußzeile für Copyright und Impressum) formatieren         */
+/*----------------------------------------------------------------------------*/
+.footer {
+  position: absolute;      /*absolute; /*Here's what sticks it*/
+  padding: 1rem;                    /* Innenabstände */
+  font-size: 1.25rem;               /* Schriftgröße */
+  display: flex;                    /* Child-Elemente in Reihe */
+  justify-content: space-between;   /* Abstand Child-Elemente */
+  align-items: center;              /* Ausrichtung zentriert */
+
+  width:100%;
+  height:44px;
+  /*padding-top:20px;*/
+  background:yellowgreen;
+  color:white;
+  font-weight:bold;
+/*  font-size:24px; */
+  text-align:center;
+
+  bottom:0;          /*to the bottom of the body/page*/
+  left:0;            /*and to the left of the body/page.*/
+}
+
+/*                         Formatierung von Links                             */
+/*----------------------------------------------------------------------------*/
+a {
+  text-decoration: none;
+  color: $color-blue;            /* Textfarbe von Links */
+  &:hover, &:focus {             /* Farbwechsel beim darüberfahren */
+    color: $color-green;
+  }
+}
+
+/*             Formatierung von main (Hauptinhalt der Webseite)               */
+/*----------------------------------------------------------------------------*/
+.main {
+  flex-grow: 1;                        /* maximale Ausdehnung */
+}
+
+/*                      Formatierung von Überschriften                        */
+/*----------------------------------------------------------------------------*/
+h1 {                                   /* Überschrift h1 */
+  color: blue;                         /* Schriftfarbe */
+  font-family: arial, sans-serif;      /* Schriftart */
+  font-size: 22m;                      /* Schriftgröße */
+  margin: 0em 0;                       /* Schriftrand */
+ }
+
+h2 {                                   /* Überschrift h2 */
+  background: yellowgreen;             /* Hintergrundfarbe */
+  color: blue;                         /* Schriftfarbe */
+   }
+
+h3 {                                   /* Überschrift h3 */
+  color: blue;                         /* Schriftfarbe */
+  font-family: arial, sans-serif;      /* Schriftart */
+  font-size: 28px;                     /* Schriftgröße */
+  font-weight: bold;                   /* Schriftstärke */
+  margin-top: 1px;                     /* Schriftrand oben */
+  margin-bottom: 1px;                  /* Schriftrand unten */
+}
+
+h4 {                                   /* Überschrift h4 */
+  color:black;                         /* Schriftfarbe */
+  font-family: arial, sans-serif;      /* Schriftart */
+  font-size: 20px;                     /* Schriftgröße */
+  font-weight: bold;                   /* Schriftstärke */
+  margin-top: 1px;                     /* Schriftrand oben */
+  margin-bottom: 1px;                  /* Schriftrand unten */
+}
+
+/* Styles für Codebeispiele */
+
+pre, code {
+  font-family: Monaco, monospace;
+  font-size: .7rem;
+}
+
+code {
+  background-color: #eaeaea;
+  padding: .2rem .3rem;
+}
+
+pre {
+  background-color: #eaeaea;
+  padding: 1rem;
+  overflow: auto;
+}
+
+pre code {
+  background-color: transparent;
+}
+
+#videobereich1 {
+    background-color: orange;
+    position: relative;
+    height: 0;
+    padding-bottom: 56.25%;
+}
+.videoExtern {
+    background-color: yellow;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.spec-table {
+  width: 100%;
+  text-align: left;
+}
+
+/*                        Konfiguration von Einzelbildern                     */
+/*----------------------------------------------------------------------------*/
+img {
+  max-width: 100%;        /* Bildbreite */
+  height: auto;           /* verhindert, dass große Bilder über ihr
+                             Container-Element hinauswachsen. */
+}
+
+/*    Konfiguration von Bildern und Bildunterschriften in mehreren Spalten    */
+/*----------------------------------------------------------------------------*/
+figure,
+figcaption {
+	margin: 0;
+	padding: 0;
+}
+
+figure.einzel1 {          /*ordnet 1 Bild an */
+	position: relative;
+	display: inline-block;
+	width: 99.5%;           /*Breite in Abhängigkeit von der Anzahl festlegen */
+}
+figure.einzel4 {          /*ordnet 4 Bilder nebeneinander an */
+	position: relative;
+	display: inline-block;
+	width: 24.5%;           /*Breite in Abhängigkeit von der Anzahl festlegen */
+}
+figure.einzel2 {          /*ordnet 2 Bilder nebeneinander an */
+	position: relative;
+	display: inline-block;
+	width: 49%;             /*Breite in Abhängigkeit von der Anzahl festlegen */
+}
+figure.einzel4 {          /*ordnet 4 Bilder nebeneinander an */
+	position: relative;
+	display: inline-block;
+	width: 24.5%;           /*Breite in Abhängigkeit von der Anzahl festlegen */
+}
+
+figure img {
+	width: 100%;
+	display: block;
+}
+
+figcaption {              /* Bildunterschrift */
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	text-align: center;     /* Textausrichtung */
+	line-height: 1em;       /* Höhe der Textzeile in und unter den Bildern */
+	color: white;           /* Textfarbe */
+	background: rgba(0, 0, 0, 0.5);   /* Hintergrundfarbe */
+}
+
+.gesamt {                 /* Gesamtbildunterschrift */
+	position: relative;     /* Position */
+	color: black;           /* Textfarbe */
+	background: white;      /* Hintregrandfarbe */
+}
+
+@media only screen and (max-width: 800px) {
+	body {
+		width: 100%;
+		margin: 2% 0;
+		padding: 1%;
+	}
+	figure.einzel {
+		width: 48%;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	figure.einzel {
+		width: 100%;
+	}
+}
+
+/*      Text in 2 Spalten als Liste anordnen (siehe z.B. index.html)          */
+/*----------------------------------------------------------------------------*/
+.textspalten2 {
+  width: auto;                       /* Breite der Spalten */
+	height: auto;                      /* Höhe der Spalten */
+  ul {                               /* Formatierung der Liste */
+	  list-style: none;                /* keine Aufzählungssymbole */
+    columns: 2 12em;                 /* Anzahl Spalten und Spaltenbreite */
+	  -webkit-colums: 2 12em;          /* dito für Browser */
+  }
+  li {                               /* Formatierung der Zeilen in der Liste */
+    background-size: auto;           /* Größe der Zeilen */
+    background-color: transparent;   /* Hintergrundfarbe */
+	  margin-bottom: 0em;              /* Abstand zwischen den Zeilen */
+  }
+}
+
+/*                    Tabellenformatierung für 3 Spalten                      */
+/*----------------------------------------------------------------------------*/
+table.tabelle3 {
+  width: 100%;                     /* Tabellenbreite */
+  background-color: #ffffff;       /* Hintergrundfarbe */
+  border-collapse: collapse;
+  border-width: 2px;               /* Rahmenbreite */
+  border-color: #ffcc00;           /* Rahmenfarbe */
+  border-style: solid;             /* Rahmenlinie */
+  color: #000000;
+}
+
+table.tabelle3 td, table.tabelle3 th {
+  border-width: 2px;
+  border-color: #ffcc00;
+  border-style: solid;
+  padding: 3px;
+}
+
+table.tabelle3 thead {
+  background-color: #ffcc00;
+}

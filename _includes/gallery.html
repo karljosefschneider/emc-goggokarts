@@ -1,0 +1,17 @@
+<div class="gallery">
+  {% for post in articles %}
+    <a class="card" href="{{post.url}}">
+      <div class="card-media">
+        <img src="{{ site.baseurl }}/img/{{post.img}}" alt="" class="">
+      </div>
+      <div class="card-body">
+          {% if post.year %}
+          <span class="card-subtitle">
+            {{ post.year }}
+          </span>
+          {% endif %}
+          {{ post.title }}
+      </div>
+    </a>
+  {% endfor %}
+</div>

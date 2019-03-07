@@ -1,0 +1,100 @@
+/*            Formatierung von Kopfmenü mit Logo und Navigation               */
+/*============================================================================*/
+/*
+.topbar {
+  border-bottom: 1px solid red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*                    Logo und Logo-Titel dimensionieren                      */
+/*----------------------------------------------------------------------------*/
+.logo {
+  display: flex;
+/*  position: fixed;*/
+  align-items: center;
+  .logo-img {                    /* Logo */
+    display: block;
+    background-color: white;
+    width: 100%;                 /* Breite des Logos */
+    height: 10rem;               /* Höhe des Logos */
+    padding: 0rem;               /* kein Rand des Logos */
+  }
+  .logo-title {                  /* Logo-Titel, hier nicht benötigt */
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    white-space: nowrap;
+    padding: 0 .5rem 0 1rem;
+  }
+}
+
+/*                       Ausrichtung für den Navi-Text                        */
+/*----------------------------------------------------------------------------*/
+.navi-wrapper {
+  text-align: center;            /* Navi-Text zentrieren */
+}
+
+.navi-link {
+  display: block;
+  padding: 1rem .5rem;
+  font-size: 1.75rem;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  @media (min-width: $medium) {
+    display: inline-block;
+    font-size: .875rem;
+  }
+  @media (min-width: $large) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  @media (min-width: $huge) {
+    display: inline-block;
+    font-size: 1.8rem;         /* Textgröße für großen Bildschirm */
+  }
+}
+
+.navi {
+  display: none;
+  position: fixed;   /*absolute;*/
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 3rem;
+  background-color: white;
+  @media (min-width: $medium) {
+    position: static;
+    display: block;
+    padding: 0;
+    background-color: yellowgreen; /* Hintergrundfarbe des Navi-Blocks */
+  }
+}
+.navi-is-visible {
+  display: block;
+}
+
+.navi-trigger {
+  display: inline-block;
+  @media (min-width: $medium) {
+    display: none;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+.navi-trigger {
+  background-color: transparent;
+  border: none;
+  padding: 1rem;
+  position: fixed;   /*relative;*/
+  z-index: 2;
+  cursor: pointer;
+  img {
+    display: block;
+    width: 1rem;
+  }
+}

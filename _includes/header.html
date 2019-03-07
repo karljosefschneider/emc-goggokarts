@@ -1,0 +1,32 @@
+<!--                    Kopfmenü mit Logo und Navigation                     -->
+<!--=========================================================================-->
+
+<header class="topbar">
+
+<!--                               Logo                                      -->
+<!----------------------------------------------------------------------------->
+  <a href="{{ site.baseurl }}/" class="logo">  <!-- zurück auf Homepage -->
+    <img class="logo-img" src="{{ site.baseurl }}/img/logo.jpg" alt="Logo"/>
+  </a>
+
+<!--                         Navigationsmenü                                 -->
+<!----------------------------------------------------------------------------->
+  <div class="navi-wrapper">
+
+    <button type="button" id="js-trigger-button" class="navi-trigger">
+      <img class="logo-img" src="{{ site.baseurl }}/img/menu-icon.svg" alt="Toggle Menu" />
+    </button>
+    
+    <nav id="js-navi" class="navi">
+      <a class="navi-link" href="{{ site.baseurl }}/verein">Verein</a>
+      <a class="navi-link" href="{{ site.baseurl }}/termine">Termine</a>
+      <a class="navi-link" href="{{ site.baseurl }}/ergebnisse">Ergebnisse</a>
+      <a class="navi-link" href="{{ site.baseurl }}/technik">Technik</a>
+      <a class="navi-link" href="{{ site.baseurl }}/mitglieder">Mitglieder</a>
+      <a class="navi-link" href="{{ site.baseurl }}/galerie">Galerie</a>
+      <a class="navi-link" href="{{ site.baseurl }}/gelaende">Gelände</a>
+      <a class="navi-link" href="{{ site.baseurl }}/links">Links</a>
+      <a class="navi-link" href="{{ site.baseurl }}/chronik">Chronik</a>
+    </nav>
+  </div>
+</header>

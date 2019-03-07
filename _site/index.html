@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Bsp.2 - mehrspaltiges Layout</title>
+		<style>
+			body {
+				font-family: sans-serif;
+				color: #333333;
+				padding:8em 0 3em;
+			}
+			body,
+			.wrapper {
+				margin: 10px auto;
+				max-width: 60em;
+			}
+
+			nav, nav a, main, article, section, aside {
+				border-radius: 0px 0.5em 0.5em;
+				border: 1px solid;
+				padding: 10px;
+				margin: 10px;
+			}
+
+			header {
+				position:fixed;
+				top:0px;
+				left:0px;
+				right:0px;
+				text-align:center;
+				padding:10px;
+				background: #F1F3F4;
+				border-bottom: 1px solid #d5d5d5;
+			}
+
+			header img {
+				width: 13em;
+				margin-right: 50px;
+				float:left;
+			}
+
+			nav {
+				font-size: 0.91em;
+				float: left;
+				width: 15em;
+				padding: 0;
+				background: #fffbf0;
+				border-color: #e7c157;
+			}
+
+			nav ul {
+				padding: 0;
+			}
+
+			nav li {
+				list-style: none;
+				margin: 0;
+				padding: 0.5em;
+			}
+
+			nav a {
+				display: block;
+				padding: 0.2em 10px;
+				font-weight: bold;
+				text-decoration: none;
+				background-color: #e7c157;
+				color: #333;
+			}
+
+			nav ul a:hover,
+			nav ul a:active  {
+				color: #fffbf0;
+				background-color: #dfac20;;
+			}
+
+			main {
+                                display: block;
+				background: #c4ced3;
+				border-color: #8a9da8;
+				margin-left: 15em;
+				min-width: 16em; /* Mindestbreite (der Überschrift) verhindert Anzeigefehler in modernen Browsern */
+			}
+
+			article {
+				background: #ffede0;
+				border-color: #df6c20;
+				margin-right: 15em;
+			}
+
+			article p {
+				margin-bottom: 10em;
+			}
+			aside {
+				background: #ebf5d7;
+				border-color: #8db243;
+				float: right;
+				width: 12em;
+			}
+
+			footer {
+				position:fixed;
+				padding: 10px;
+				bottom:0;
+				left: 0;
+				right:0;
+				background: #c32e04;
+				border-color: #8a9da8;
+			}
+
+			footer p {
+				float:right;
+				margin: 0;
+			}
+		</style>
+		<title>Bsp.2 - fixer footer und header</title>
+	</head>
+
+	<body>
+		<header>
+			<div class="wrapper">
+				<img src="/images/9/99/Selfhtml-beispiel-logo.png" alt="logo">
+				<h1>Seitentitel</h1>
+			</div>
+		</header>
+
+		<nav>
+			<ul>
+				<li><a href="#link_1.html">Startseite</a></li>
+				<li><a href="#link_2.html">Unterseite 1</a></li>
+				<li><a href="#link_3.html">Unterseite 2</a></li>
+				<li><a href="#link_4.html">Kontakt</a></li>
+			</ul>
+		</nav>
+
+		<main>
+			<aside id="info">
+				<h2>Info-Box</h2>
+				<p>Mit position:fixed werden footer- und header-Element als feststehende
+					Element definiert. Mittels bottom: 0; wird der footer 0 Pixel von der
+					Unterkante des Darstellungsbereiches entfernt, also ganz unten
+					positioniert. Der header wird mit top:0; ganz oben positioniert.
+				</p>
+			</aside>
+
+			<article>
+				<h2>CSS-basierte Layouts</h2>
+				<h3>feststehender Footer</h3>
+				<p>Dieser Absatz ist nur dafür da, damit Sie etwas zum Scrollen haben.</p>
+				<p>Dieser Absatz ist nur dafür da, damit Sie etwas zum Scrollen haben.</p>
+				<p>Dieser Absatz ist nur dafür da, damit Sie etwas zum Scrollen haben.</p>
+			</article>
+			<article>
+				<h2>CSS-basierte Layouts</h2>
+				<h3>feststehender Footer</h3>
+				<p>Dieser Absatz ist nur dafür da, damit Sie etwas zum Scrollen haben.</p>
+				<p>Dieser Absatz ist nur dafür da, damit Sie etwas zum Scrollen haben.</p>
+				<p>Dieser Absatz ist nur dafür da, damit Sie etwas zum Scrollen haben.</p>
+			</article>
+			<article>
+				<h2>CSS-basierte Layouts</h2>
+				<h3>feststehender Footer</h3>
+				<p>Dieser Absatz ist nur dafür da, damit Sie etwas zum Scrollen haben.</p>
+				<p>Dieser Absatz ist nur dafür da, damit Sie etwas zum Scrollen haben.</p>
+				<p>Dieser Absatz ist nur dafür da, damit Sie etwas zum Scrollen haben.</p>
+			</article>
+		</main>
+
+		<footer>
+			<div class="wrapper">
+				<a href="#kontakt.html">Kontakt</a>
+				<p>© 2014 by selfHTML</p>
+			</div>
+		</footer>
+
+	</body>
+</html>
