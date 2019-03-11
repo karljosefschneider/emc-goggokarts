@@ -1,22 +1,22 @@
-<!--              default.html (Basis-layout der Webseite)               -->
-<!------------------------------------------------------------------------->
+<!--              default.html (Basis-layout der Webseite)            -->
+<!---------------------------------------------------------------------->
 <!DOCTYPE html>
-<html lang="de">                    <!-- Spache der Website definieren -->
+<html lang="de">                   <!-- Spache der Website definieren -->
 
-<!--                         Head der HTML-Seite                         -->
-<!--*********************************************************************-->
+<!--                         Head der HTML-Seite                      -->
+<!--******************************************************************-->
 <head>
-	<meta charset="utf-8">            <!-- Zeichencodierung festlegen -->
-  <title>Erler Motor Club</title>   <!-- Titel des Dokumentes festlegen -->
+	<meta charset="utf-8">           <!-- Zeichencodierung festlegen -->
+  <title>Erler Motor Club</title>  <!-- Titel des Dokumentes festlegen -->
 
-  <!--            Anzeigebereich für mobile Geräte optimieren            -->
+  <!--            Anzeigebereich für mobile Geräte optimieren         -->
   <meta name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1">
 
-	<!--                  Einbinden der Formatvorlagen                     -->
+	<!--                  Einbinden der Formatvorlagen                  -->
 	<link rel="stylesheet" href="css/main.css">
 
-  <!--                   Google Analytics einbinden                      -->
+  <!--                   Google Analytics einbinden                   -->
   <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -27,21 +27,21 @@
   </script>
 </head>
 
-<!--                         Body der HTML-Seite                         -->
-<!--*********************************************************************-->
+<!--                         Body der HTML-Seite                      -->
+<!--******************************************************************-->
 <body>
-<!--                              Header                                 -->
-<!--=====================================================================-->
+<!--                              Header                              -->
+<!--==================================================================-->
 <header>
 <div class="wrapper">
-<!--                               Logo                                  -->
-<!------------------------------------------------------------------------->
+<!--                               Logo                               -->
+<!---------------------------------------------------------------------->
 <a href="/" class="logo">  <!-- zurück auf Homepage -->
   <img class="logo-img" src="/img/logo.jpg" alt="Logo"/>
 </a>
 
-<!--                            Navigation                               -->
-<!------------------------------------------------------------------------->
+<!--                            Navigation                            -->
+<!---------------------------------------------------------------------->
 <nav>
 	<ul>
   <li><a href="/verein">Verein</a></li>
@@ -58,19 +58,21 @@
 </div>
 </header>
 
-<!--                           Hauptinhalt                               -->
-<!--=====================================================================-->
-<!--                            Seitenkopf                               -->
-<!------------------------------------------------------------------------->
-<div class="seitenkopf">       <!--   Box für den Seitenkopf             -->
+<!--                           Hauptinhalt                            -->
+<!--==================================================================-->
+<!--                            Seitenkopf                            -->
+<!---------------------------------------------------------------------->
+<div class="seitenkopf">       <!-- Box für den Seitenkopf -->
   <h1>
-  Bildergalerie unseres Vereins               <!--   Seitentitel in der Box             -->
+  Bildergalerie unseres Vereins               <!-- Seitentitel in der Box -->
   </h1>
   <p>
-           <!--   Beschreibung der Seite (optional)  -->
+           <!-- Beschreibung der Seite (optional) -->
   </p>
 </div>
 
+<!--                            Seitenkopf                            -->
+<!---------------------------------------------------------------------->
 <main class="main">
   <img src="/img/galerie/galerie_01.jpg" alt="Galeriebild Nr. 1">
 <img src="/img/galerie/galerie_02.jpg" alt="Galeriebild Nr. 2">
@@ -84,15 +86,17 @@
 <img src="/img/galerie/galerie_10.jpg" alt="Galeriebild Nr. 10">
 <img src="/img/galerie/galerie_11.jpg" alt="Galeriebild Nr. 11">
 <img src="/img/galerie/galerie_12.jpg" alt="Galeriebild Nr. 12">
-                <!-- Hauptmenü -->
+                <!-- Seiteninhalt -->
 </main>
 
-    <footer>
-			<div class="wrapper">
-				<a href="impressum">Impressum</a>
-				<p>© 2019 Karl-Josef Schneider</p>
-			</div>
-		</footer>
+<!--                              Footer                              -->
+<!--==================================================================-->
+<footer>
+	<div class="wrapper">
+		<a href="impressum">Impressum</a>
+		<p>© 2019 Karl-Josef Schneider</p>
+	</div>
+</footer>
 
-	</body>
+</body>
 </html>
