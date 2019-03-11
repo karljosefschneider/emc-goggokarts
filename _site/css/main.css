@@ -37,7 +37,7 @@ body,
 /*----------------------------------------------------------------------------*/
 header {
   position:fixed;                    /* Position fixiert */
-  height: 22%;  /*auto;                      /* Höhe header an Bildschirm angepasst*/
+  height: 21%;  /*auto;                      /* Höhe header an Bildschirm angepasst*/
   width: 100%;                       /* Breite = 100% der Seitenbereite */
   top: 0px;                          /* Abstand vom oberen Seitenrand */
   left: 0px;                         /* Abstand vom linken Seietenrand */
@@ -56,15 +56,15 @@ header {
   padding: 0rem;                     /* Rand des Logos */
 }
 
-/*                        Navigationsmenü formatieren                         */
-/*   siehe:  https://wiki.selfhtml.org/wiki/CSS/Tutorials/Dropdown-Men%C3%BCs */
-/*           _mit_CSS_gestalten        Beispiel: Responsive Navigation        */
+/*   Navigation nach Bildschirmbreite horizontal oder vertikal formatieren    */
+/*############################################################################*/
+/*               Horizontale Ausrichtung für breite Bildschirme               */
+/*https://wiki.selfhtml.org/wiki/CSS/Tutorials/Dropdown-Men%C3%BCs_mit_CSS_gestalten*/
 /*----------------------------------------------------------------------------*/
-input#responsive-nav,
+input#responsive-nav,                /* Navigations-Icon ausblenden */
 label.responsive-nav-label {
   display: none;
 }
-
 
 nav ul {
 	margin: 0;
@@ -117,13 +117,11 @@ nav li[aria-current] a:hover {       /* Farbwechsel beim Überfahren */
 	background-color: gold;            /* Hintergrundfarbe */
 }
 
-/*                 http://www.olivergast.de/blog/2015/05/22/css               */
-/*            -ein-horizontales-dropdown-menue-responsive-gestalten/          */
+/*                Vertikale Ausrichtung für schmale Bildschirme               */
+/*        siehe:  ttp://www.olivergast.de/blog/2015/05/22/css                 */
 /*----------------------------------------------------------------------------*/
 @media screen and (max-width: 1024px) {   /* Angabe der Bildschirmbreite für die
                                              responsive Darstellung des Menüs */
-
-
 
 label.responsive-nav-label {
   position: relative;
