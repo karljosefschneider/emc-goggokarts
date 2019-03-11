@@ -104,10 +104,10 @@ nav a {
 	transition: all .25s ease-in;
 }
 
-nav li[aria-current] a {
+/*nav li[aria-current] a {
 	background-color: firebrick;
 	color: gold;
-}
+}*/
 
 nav a:focus,
 nav a:hover,
@@ -127,7 +127,7 @@ label.responsive-nav-label {
   position: relative;
   display: block;
   padding: 20px;
-  background: #222;
+  background: blue;                   /* Hitergrundfarbe Navigationsbalken*/
   cursor: pointer;
   color: #fff;
 }
@@ -160,14 +160,26 @@ nav ul {
 
 nav li {
   float: none !important;
-  width: 100% !important;
+  width: 25%;  /*100% !important;*/
   border-bottom: none !important;
 }
 
 nav li a {
   margin-bottom: 10px !important;
   padding: 10px 20px !important;
-  background: #4a4a4a;
+
+  display: block;
+	/*padding: 0.4em;*/
+	text-decoration: none;               /* keine Aufzählungszeichen */
+  font-family: arial, sans-serif;      /* Schriftart */
+  font-weight: bold;                   /* Schriftart "fett" */
+	text-align: center;                  /* Schriftausrichtung zentriert */
+	border: 1px solid darkblue;          /* Rahmen der Boxen */
+	border-radius: 10px;                 /* Radien der Rahmen */
+	box-shadow: 0 5px 10px white inset;  /* Schatten der Boxen */
+	color: gold;                         /* Textfarbe */
+	background-color: darkblue;          /* Hintergrundfarbe */
+	transition: all .25s ease-in;
 }
 
 nav ul li:hover {
@@ -175,7 +187,9 @@ nav ul li:hover {
 }
 
 nav ul li a:hover {
-  background: #4096ee;
+  /*background: #4096ee;*/
+  color: darkblue;                   /* Textfarbe */
+	background-color: gold;            /* Hintergrundfarbe */
 }
 
 nav ul ul {
