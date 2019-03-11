@@ -36,8 +36,8 @@
 <div class="wrapper">
 <!--                               Logo                                  -->
 <!------------------------------------------------------------------------->
-<a href="{{ site.baseurl }}/" class="logo">  <!-- zurück auf Homepage -->
-  <img class="logo-img" src="{{ site.baseurl }}/img/logo.jpg" alt="Logo"/>
+<a href="/" class="logo">  <!-- zurück auf Homepage -->
+  <img class="logo-img" src="/img/logo.jpg" alt="Logo"/>
 </a>
 
 <!--                            Navigation                               -->
@@ -64,15 +64,57 @@
 <!------------------------------------------------------------------------->
 <div class="seitenkopf">       <!--   Box für den Seitenkopf             -->
   <h1>
-  {{page.title}}               <!--   Seitentitel in der Box             -->
+  Punktetabelle und Jahressieger               <!--   Seitentitel in der Box             -->
   </h1>
   <p>
-  {{page.description}}         <!--   Beschreibung der Seite (optional)  -->
+           <!--   Beschreibung der Seite (optional)  -->
   </p>
 </div>
 
 <main class="main">
-  {{ content }}                <!-- Hauptmenü -->
+  <!--               aktuelle Punktetabelle vom laufenden Jahr                 -->
+<!----------------------------------------------------------------------------->
+<img src="/img/punkte/punkte_2018.jpg" alt="aktuelle Punktetabelle">
+
+<!--               Tabelle der Jahressieger (letzte 5 Jahre)                 -->
+<!----------------------------------------------------------------------------->
+<table class="tabelle3">
+  <thead>
+    <tr>
+      <th>Jahressieger</th>
+      <th>Goggo</th>
+      <th>Kart</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2018</td>
+      <td>Matthias Schulte-Bocholt</td>
+      <td>Benjamin Schneider</td>
+    </tr>
+    <tr>
+      <td>2017</td>
+      <td>Matthias Schulte-Bocholt</td>
+      <td>Victor Roh</td>
+    </tr>
+    <tr>
+      <td>2016</td>
+      <td>Matthias Schulte-Bocholt</td>
+      <td>Benjamin Schneider</td>
+    </tr>
+    <tr>
+      <td>2015</td>
+      <td>Matthias Schulte-Bocholt</td>
+      <td>Benjamin Schneider</td>
+    </tr>
+    <tr>
+      <td>2014</td>
+      <td>Walter Huhn</td>
+      <td>Benjamin Schneider</td>
+    </tr>
+  </tbody>
+</table>
+                <!-- Hauptmenü -->
 </main>
 
     <footer>
