@@ -37,7 +37,7 @@ body,
 /*----------------------------------------------------------------------------*/
 header {
   position:fixed;                    /* Position fixiert */
-  height: 22%;                       /* Höhe = 20% der Seitenhöhe */
+  height: 22%;  /*auto;                      /* Höhe header an Bildschirm angepasst*/
   width: 100%;                       /* Breite = 100% der Seitenbereite */
   top: 0px;                          /* Abstand vom oberen Seitenrand */
   left: 0px;                         /* Abstand vom linken Seietenrand */
@@ -45,14 +45,14 @@ header {
   background: yellowgreen;           /* Hintergrundfarbe */
   z-index: 10;                       /* ein z-index > 1 sorgt dafür, dass der
                                         Bereich beim Scrollen nicht vom nach-
-                                        folgenden Content überdeckt wird */
+                                        folgenden Inhalt überdeckt wird */
 }
 
 /*                              Logo formatieren                              */
 /*----------------------------------------------------------------------------*/
 .logo-img {
   width: 100%;                       /* Breite des Logos */
-  height: 10rem;                     /* Höhe des Logos */
+  height: auto;                      /* Höhe des Logos an Bildschirm angepasst*/
   padding: 0rem;                     /* Rand des Logos */
 }
 
@@ -60,20 +60,27 @@ header {
 /*   siehe:  https://wiki.selfhtml.org/wiki/CSS/Tutorials/Dropdown-Men%C3%BCs */
 /*           _mit_CSS_gestalten        Beispiel: Responsive Navigation        */
 /*----------------------------------------------------------------------------*/
+input#responsive-nav,
+label.responsive-nav-label {
+  display: none;
+}
+
+
 nav ul {
 	margin: 0;
 	padding: 0;
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 }
 
 nav li {
 	list-style: none;
 	margin: 0.5em;
 	padding: 0;
-	font-size: 1.5em;
+  flex: 1;
+  font-size: 1em;
 }
-
+/*
 @media (min-width: 45em) {
 	nav ul {
 		flex-direction: row;
@@ -81,9 +88,7 @@ nav li {
 	nav li {
 		flex: 1;
 		font-size: 1em;
-	}
-}
-
+	} */
 nav a {
 	display: block;
 	padding: 0.4em;
@@ -110,6 +115,83 @@ nav li[aria-current] a:focus,
 nav li[aria-current] a:hover {       /* Farbwechsel beim Überfahren */
 	color: darkblue;                   /* Textfarbe */
 	background-color: gold;            /* Hintergrundfarbe */
+}
+
+/*                 http://www.olivergast.de/blog/2015/05/22/css               */
+/*            -ein-horizontales-dropdown-menue-responsive-gestalten/          */
+/*----------------------------------------------------------------------------*/
+@media screen and (max-width: 1024px) {   /* Angabe der Bildschirmbreite für die
+                                             responsive Darstellung des Menüs */
+
+
+
+label.responsive-nav-label {
+  position: relative;
+  display: block;
+  padding: 20px;
+  background: #222;
+  cursor: pointer;
+  color: #fff;
+}
+
+label.responsive-nav-label span {
+  margin-right: 10px;
+}
+
+nav {
+  position: absolute;
+  top: -9999px;
+  padding: 10px;
+}
+
+input#responsive-nav[type=checkbox]:checked ~ nav {
+  position: relative;
+  top: 0;
+}
+
+nav a:after {
+  display: none;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+}
+
+nav li {
+  float: none !important;
+  width: 100% !important;
+  border-bottom: none !important;
+}
+
+nav li a {
+  margin-bottom: 10px !important;
+  padding: 10px 20px !important;
+  background: #4a4a4a;
+}
+
+nav ul li:hover {
+  background: none;
+}
+
+nav ul li a:hover {
+  background: #4096ee;
+}
+
+nav ul ul {
+  position: relative !important;
+  width: 100%;
+  left: 0 !important;
+  top: 0 !important;
+  background: none !important;
+  box-shadow: none;
+}
+
+nav ul ul li {
+  padding-left: 20px;
+}
 }
 
 /*                         Hauptinhalt der Webseite                           */
