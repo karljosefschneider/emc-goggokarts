@@ -2,42 +2,22 @@
 /******************************************************************************/
 /*                                Body                                        */
 /*----------------------------------------------------------------------------*/
+html, body {
+    width: 100%;
+}
 body {
 display: flex;                       /* Child-Elemente in Reihe */
 flex-direction: column;              /* Reihe als Säule anordnen */
-min-height: 100%;                    /* Mindesthöhe Browswerfenster */
-
-width: auto;
-padding-top: 9em;                    /* Abstand zum Kopfbereich */
-line-height: 1.5;
-letter-spacing: 0.005em;
+min-height: auto;                    /* Mindesthöhe Browswerfenster */
 background-color: lightgrey;         /* Hintergrundfarbe */
 font-family: "Calibri", Arial, Helvetica, sans-serif;
-}
-@media (min-width: 600px) {
-    body {
-    font-size: 1rem;
-    background-color: lightblue;         /* Hintergrundfarbe */
-    }
-}
-@media (min-width: 1024px) {       /* Anpassung an die Bildschirmgrößen */
-    body {
-    font-size: 1.25rem;
-    background-color: lightgrey;         /* Hintergrundfarbe */
-    }
-}
-@media (min-width: 1440px) {        /* Anpassung an die Bildschirmgrößen */
-    body {
-    font-size: 1.5rem;
-    background-color: lightyellow;         /* Hintergrundfarbe */
-    }
 }
 
 /*                     zentrierte Ausrichtung der Elemente                    */
 /*----------------------------------------------------------------------------*/
 body,
 .wrapper {
-  margin: 1px auto;
+  margin: 0 auto;
   max-width: 80em;
 }
 
@@ -91,15 +71,7 @@ nav li {
   flex: 1;
   font-size: 1em;
 }
-/*
-@media (min-width: 45em) {
-	nav ul {
-		flex-direction: row;
-	}
-	nav li {
-		flex: 1;
-		font-size: 1em;
-	} */
+
 nav a {
 	display: block;
 	padding: 0.4em;
@@ -115,17 +87,12 @@ nav a {
 	transition: all .25s ease-in;
 }
 
-/*nav li[aria-current] a {
-	background-color: firebrick;
-	color: gold;
-}*/
-
 nav a:focus,
 nav a:hover,
 nav li[aria-current] a:focus,
-nav li[aria-current] a:hover {       /* Farbwechsel beim Überfahren */
-	color: darkblue;                   /* Textfarbe */
-	background-color: gold;            /* Hintergrundfarbe */
+nav li[aria-current] a:hover {         /* Farbwechsel beim Überfahren */
+	color: darkblue;                     /* Textfarbe */
+	background-color: gold;              /* Hintergrundfarbe */
 }
 
 /*                Vertikale Ausrichtung für schmale Bildschirme               */
@@ -134,13 +101,13 @@ nav li[aria-current] a:hover {       /* Farbwechsel beim Überfahren */
 @media screen and (max-width: 1024px) {   /* Angabe der Bildschirmbreite für die
                                              responsive Darstellung des Menüs */
 
-label.responsive-nav-label {
+label.responsive-nav-label {           /* Navigationsbalken */
   position: relative;
   display: block;
-  padding: 20px;
-  background: blue;                   /* Hitergrundfarbe Navigationsbalken*/
-  cursor: pointer;
-  color: #fff;
+  padding: 10px;                       /* Innenabstände */
+  background: blue;                    /* Hitergrundfarbe */
+  cursor: pointer;                     /* Cursor Handsymbol */
+  color: white;                        /* Textfarbe */
 }
 
 label.responsive-nav-label span {
@@ -198,9 +165,8 @@ nav ul li:hover {
 }
 
 nav ul li a:hover {
-  /*background: #4096ee;*/
-  color: darkblue;                   /* Textfarbe */
-	background-color: gold;            /* Hintergrundfarbe */
+  color: darkblue;                     /* Textfarbe */
+	background-color: gold;              /* Hintergrundfarbe */
 }
 
 nav ul ul {
@@ -231,25 +197,11 @@ nav ul ul li {
   -webkit-border-radius: 20px 0px 20px 0px;
   background-color: white;
   text-align: center;                  /* Textausrichtung in der Box */
-  padding-top: 0px;                    /* Abstände oben in der Box */
+  padding-top: 10px;                   /* Abstand oben in der Box */
   margin-top: 100px;                   /* Abstand der Box nach oben */
   margin-bottom: 20px;                 /* Abstand der Box nach unten */
   margin-left:auto;
   margin-right:auto;
-  @media (min-width: $medium) {        /* Anpassung an die Bildschirmgrößen */
-    max-width: 54rem;                  /* Breite */
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-  @media (min-width: $large) {         /* Anpassung an die Bildschirmgrößen */
-    padding-left: 3rem;
-    padding-right: 3rem;
-  }
-  @media (min-width: $huge) {          /* Anpassung an die Bildschirmgrößen */
-    max-width: 64rem;                  /* Breite */
-    padding-left: 5rem;
-    padding-right: 5rem;
-  }
 }
 
 /*                Textbereich für die einzelnen Seiten formatieren            */
@@ -257,11 +209,12 @@ nav ul ul li {
 main {
   display: block;
   background: white;                   /* Hintergrundfarbe */
-  width: 80%;
-  margin: auto;
-  padding: 50px;
-  flex-grow: 1;                        /* maximale Ausdehnung */
-  min-width: 16em;                     /* Mindestbreite (der Überschrift)
+  width: auto;                         /* Breite des Elementes */
+  margin: auto;                        /* Randabstände */
+  margin-bottom: 18px;                 /* Abstand von der Fußzeile */
+  /*padding: 50px;*/
+  /*flex-grow: 1;                        /* maximale Ausdehnung */
+  /*min-width: 16em;                     /* Mindestbreite (der Überschrift)
                                 verhindert Anzeigefehler in modernen Browsern */
 }
 
@@ -272,7 +225,7 @@ main {
 /*----------------------------------------------------------------------------*/
 footer {
   position:fixed;                     /* Position fixiert */
-  padding: 10px;                      /* Innenränder des Header-Blocks */
+  padding: 5px;                      /* Innenränder des Footer-Blocks */
   bottom:0;                           /* Abstand vom Boden */
   left: 0;                            /* Abstand links vom Seitenrand*/
   right:0;                            /* Abstand rechts vom Seitenrand*/
@@ -291,7 +244,6 @@ footer p {
 h1 {                                   /* Überschrift h1 */
   color: blue;                         /* Schriftfarbe */
   font-family: arial, sans-serif;      /* Schriftart */
-  font-size: 22m;                      /* Schriftgröße */
   margin: 0em 0;                       /* Schriftrand */
  }
 
@@ -304,7 +256,6 @@ h2 {                                   /* Überschrift h2 */
 h3 {                                   /* Überschrift h3 */
   color: blue;                         /* Schriftfarbe */
   font-family: arial, sans-serif;      /* Schriftart */
-  font-size: 28px;                     /* Schriftgröße */
   font-weight: bold;                   /* Schriftstärke */
   margin-top: 1px;                     /* Schriftrand oben */
   margin-bottom: 1px;                  /* Schriftrand unten */
@@ -313,7 +264,6 @@ h3 {                                   /* Überschrift h3 */
 h4 {                                   /* Überschrift h4 */
   color:black;                         /* Schriftfarbe */
   font-family: arial, sans-serif;      /* Schriftart */
-  font-size: 20px;                     /* Schriftgröße */
   font-weight: bold;                   /* Schriftstärke */
   margin-top: 1px;                     /* Schriftrand oben */
   margin-bottom: 1px;                  /* Schriftrand unten */
@@ -338,21 +288,22 @@ figcaption {
   /*background-color: lightgrey;*/
 }
 
-figure.einzel1 {          /*ordnet 1 Bild an */
+figure.einzel1 {                     /* ordnet 1 Bild an */
 	position: relative;
 	display: inline-block;
-	width: 99.5%;           /*Breite in Abhängigkeit von der Anzahl festlegen */
+	width: 99.5%;                      /* Breite eines Bildes */
 }
-figure.einzel2 {          /*ordnet 2 Bilder nebeneinander an */
+figure.einzel2 {                     /* ordnet 2 Bilder nebeneinander an */
 	position: relative;
 	display: inline-block;
-  background-color: transparent;   /* Hintergrundfarbe */
-	width: 49.8%;           /*Breite in Abhängigkeit von der Anzahl festlegen */
+  width: 47%;                        /* Breite eines Bildes */
+  margin-left: 2%;                   /* Rand links */
+  background-color: transparent;     /* Hintergrundfarbe */
 }
-figure.einzel4 {          /*ordnet 4 Bilder nebeneinander an */
+figure.einzel4 {                     /* ordnet 4 Bilder nebeneinander an */
 	position: relative;
 	display: inline-block;
-	width: 24.5%;           /*Breite in Abhängigkeit von der Anzahl festlegen */
+	width: 24.5%;                      /* Breite eines Bildes */
 }
 
 figure img {
@@ -376,31 +327,8 @@ figcaption {              /* Bildunterschrift */
 	background: white;      /* Hintregrandfarbe */
 }
 
-@media only screen and (max-width: 800px) {
-	body {
-		width: 100%;
-		margin: 2% 0;
-		padding: 1%;
-	}
-	figure.einzel {
-		width: 48%;
-	}
-}
-
-@media only screen and (max-width: 600px) {
-	figure.einzel {
-		width: 100%;
-	}
-}
-
-/*                         Liste mit Texteinzug links                         */
+/*                                 Liste                                      */
 /*----------------------------------------------------------------------------*/
-.einzug {
-  text-indent: 8em;                /* Texteinzug links */
-}
-.liste {
-  text-indent: 8em;                /* Texteinzug links */
-}
 .liste ul {                        /* Formatierung der Liste */
   list-style: none;                /* keine Aufzählungssymbole */
   columns: 1 12em;                 /* Anzahl Spalten und Spaltenbreite */
@@ -448,7 +376,7 @@ table.tabelle3 td, table.tabelle3 th {
   border-width: 2px;
   border-color: #ffcc00;
   border-style: solid;
-  padding: 3px;
+  padding: 5px;                    /* Innenabstand des Textes */
 }
 
 table.tabelle3 thead {
@@ -456,4 +384,93 @@ table.tabelle3 thead {
 }
 #spalte1 {
   width: 200px;
+}
+
+/*          Anpassung der Inhalte an verschiedene Bildschirmgrößen            */
+/*----------------------------------------------------------------------------*/
+@media (min-width: 180px) {          /* für Bildschirme breiter 380 Pixel */
+  body {
+    font-size: 0.8rem;               /* Schriftgröße anpassen */
+    padding-top: 8%;                 /* Abstand zum Kopfbereich */
+  }
+  .seitenkopf {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  main{
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  h1 {
+    font-size: 0.8rem;               /* h1 Schriftgröße */
+  }
+}
+@media (min-width: 600px) {          /* für Bildschirme breiter 600 Pixel */
+  body {
+    font-size: 1rem;                 /* Schriftgröße anpassen */
+    padding-top: 8%;                 /* Abstand zum Kopfbereich */
+  }
+  .seitenkopf {
+    max-width: 35rem;                /* Breite */
+  }
+  main{
+    max-width: 45rem;                /* Breite */
+  }
+  h1 {
+    font-size: 1.6rem;               /* h1 Schriftgröße */
+  }
+  h2 {
+    font-size: 1.6rem;               /* h2 Schriftgröße */
+  }
+  h3 {
+    font-size: 1.2rem;               /* h3 Schriftgröße */
+  }
+}
+@media (min-width: 1024px) {         /* für Bildschirme größer 1024 Pixel */
+  body {
+    font-size: 1.25rem;              /* Schriftgröße anpassen */
+    padding-top: 10%;                /* Abstand zum Kopfbereich */
+    background-color: lightgrey;     /* Hintergrundfarbe */
+  }
+  .seitenkopf {
+    max-width: 45rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  main{
+    max-width: 54rem;
+  }
+  h1 {
+    font-size: 2rem;                 /* h1 Schriftgröße */
+  }
+  h2 {
+    font-size: 2rem;                 /* h2 Schriftgröße */
+  }
+  h3 {
+    font-size: 1.5rem;               /* h3 Schriftgröße */
+  }
+}
+@media (min-width: 1440px) {         /* für Bildschirme größer 1440 Pixel */
+  body {
+    font-size: 1.5rem;               /* Schriftgröße anpassen */
+  }
+  .seitenkopf {
+    max-width: 55rem;                /* Breite */
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  main{
+    max-width: 64rem;                /* Breite */
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  h1 {
+    font-size: 2.5rem;               /* h1 Schriftgröße */
+  }
+  h2 {
+    font-size: 2.5rem;               /* h2 Schriftgröße */
+  }
+  h3 {
+    font-size: 2rem;                 /* h3 Schriftgröße */
+  }
 }
