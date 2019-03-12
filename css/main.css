@@ -6,20 +6,31 @@ body {
 display: flex;                       /* Child-Elemente in Reihe */
 flex-direction: column;              /* Reihe als Säule anordnen */
 min-height: 100%;                    /* Mindesthöhe Browswerfenster */
+
+width: auto;
+padding-top: 9em;                    /* Abstand zum Kopfbereich */
 line-height: 1.5;
 letter-spacing: 0.005em;
 background-color: lightgrey;         /* Hintergrundfarbe */
 font-family: "Calibri", Arial, Helvetica, sans-serif;
-padding-top: 9em;                    /* Abstand zum Kopfbereich */
-  @media (min-width: $medium) {      /* Anpassung an die Bildschirmgrößen */
+}
+@media (min-width: 600px) {
+    body {
     font-size: 1rem;
-  }
-  @media (min-width: $large) {       /* Anpassung an die Bildschirmgrößen */
+    background-color: lightblue;         /* Hintergrundfarbe */
+    }
+}
+@media (min-width: 1024px) {       /* Anpassung an die Bildschirmgrößen */
+    body {
     font-size: 1.25rem;
-  }
-  @media (min-width: $huge) {        /* Anpassung an die Bildschirmgrößen */
+    background-color: lightgrey;         /* Hintergrundfarbe */
+    }
+}
+@media (min-width: 1440px) {        /* Anpassung an die Bildschirmgrößen */
+    body {
     font-size: 1.5rem;
-  }
+    background-color: lightyellow;         /* Hintergrundfarbe */
+    }
 }
 
 /*                     zentrierte Ausrichtung der Elemente                    */
@@ -37,8 +48,8 @@ body,
 /*----------------------------------------------------------------------------*/
 header {
   position:fixed;                    /* Position fixiert */
-  height: 21%;  /*auto;                      /* Höhe header an Bildschirm angepasst*/
   width: 100%;                       /* Breite = 100% der Seitenbereite */
+  /* keine Höhenangabe, diese ergibt sich automatisch aus dem Inhalt*/
   top: 0px;                          /* Abstand vom oberen Seitenrand */
   left: 0px;                         /* Abstand vom linken Seietenrand */
   padding: 10px;                     /* Innenränder des Header-Blocks */
