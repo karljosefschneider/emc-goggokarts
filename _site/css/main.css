@@ -138,16 +138,15 @@ nav ul {
 
 nav li {
   float: none !important;
-  width: 25%;  /*100% !important;*/
+  width: 25%;                          /* Breite */
   border-bottom: none !important;
 }
 
-nav li a {
+nav li a {                             /* Formatierung der Navi-Buttons */
   margin-bottom: 10px !important;
-  padding: 10px 20px !important;
+  padding: 10px 0px;                   /* Innenabstände oben/unten & seitlich*/
 
   display: block;
-	/*padding: 0.4em;*/
 	text-decoration: none;               /* keine Aufzählungszeichen */
   font-family: arial, sans-serif;      /* Schriftart */
   font-weight: bold;                   /* Schriftart "fett" */
@@ -164,7 +163,7 @@ nav ul li:hover {
   background: none;
 }
 
-nav ul li a:hover {
+nav ul li a:hover {                    /* Farbänderungen beim Überfahren */
   color: darkblue;                     /* Textfarbe */
 	background-color: gold;              /* Hintergrundfarbe */
 }
@@ -211,11 +210,8 @@ main {
   background: white;                   /* Hintergrundfarbe */
   width: auto;                         /* Breite des Elementes */
   margin: auto;                        /* Randabstände */
-  margin-bottom: 18px;                 /* Abstand von der Fußzeile */
-  /*padding: 50px;*/
-  /*flex-grow: 1;                        /* maximale Ausdehnung */
-  /*min-width: 16em;                     /* Mindestbreite (der Überschrift)
-                                verhindert Anzeigefehler in modernen Browsern */
+  margin-bottom: 50px;                 /* Abstand von der Fußzeile */
+  flex-grow: 1;                        /* maximale Ausdehnung */
 }
 
 /*        Footer  (feststehende Fußzeile mit Impressum und Copyright          */
@@ -285,7 +281,6 @@ figure,
 figcaption {
 	margin: 0;
 	padding: 0;
-  /*background-color: lightgrey;*/
 }
 
 figure.einzel1 {                     /* ordnet 1 Bild an */
@@ -303,7 +298,7 @@ figure.einzel2 {                     /* ordnet 2 Bilder nebeneinander an */
 figure.einzel4 {                     /* ordnet 4 Bilder nebeneinander an */
 	position: relative;
 	display: inline-block;
-	width: 24.5%;                      /* Breite eines Bildes */
+	width: 24.3%;                      /* Breite eines Bildes */
 }
 
 figure img {
@@ -311,12 +306,12 @@ figure img {
 	display: block;
 }
 
-figcaption {              /* Bildunterschrift */
+figcaption {                         /* Bildunterschrift */
 	position: absolute;
 	bottom: 0;
 	width: 100%;
-	text-align: center;     /* Textausrichtung */
-	line-height: 3em;       /* Höhe der Textzeile in und unter den Bildern */
+	text-align: center;                /* Textausrichtung */
+	line-height: 1em;                  /* Höhe der Textzeile in und unter den Bildern */
 	color: white;           /* Textfarbe */
 	background: rgba(0, 0, 0, 0.5);   /* Hintergrundfarbe */
 }
@@ -336,7 +331,6 @@ figcaption {              /* Bildunterschrift */
 }
 .liste li {                        /* Formatierung der Zeilen in der Liste */
   background-size: auto;           /* Größe der Zeilen */
-  /*background-color: transparent;   /* Hintergrundfarbe */
   margin-bottom: 0em;              /* Abstand zwischen den Zeilen */
   text-align: left;                /* Text linksbündig */
 }
@@ -349,8 +343,8 @@ figcaption {              /* Bildunterschrift */
 }
   ul {                               /* Formatierung der Liste */
 	  list-style: none;                /* keine Aufzählungssymbole */
-    columns: 2 12em;                 /* Anzahl Spalten und Spaltenbreite */
-	  -webkit-colums: 2 12em;          /* dito für Browser */
+    columns: 2 9em;                 /* Anzahl Spalten und Spaltenbreite */
+	  -webkit-colums: 2 9em;          /* dito für Browser */
   }
   li {                               /* Formatierung der Zeilen in der Liste */
     background-size: auto;           /* Größe der Zeilen */
@@ -388,7 +382,7 @@ table.tabelle3 thead {
 
 /*          Anpassung der Inhalte an verschiedene Bildschirmgrößen            */
 /*----------------------------------------------------------------------------*/
-@media (min-width: 180px) {          /* für Bildschirme breiter 380 Pixel */
+@media (max-width: 599px) {          /* für Bildschirme kleiner 600 Pixel */
   body {
     font-size: 0.8rem;               /* Schriftgröße anpassen */
     padding-top: 8%;                 /* Abstand zum Kopfbereich */
@@ -396,6 +390,7 @@ table.tabelle3 thead {
   .seitenkopf {
     padding-left: 1rem;
     padding-right: 1rem;
+    margin-top: 75px;                /* Abstand der Box nach oben */
   }
   main{
     padding-left: 1rem;
