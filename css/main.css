@@ -308,31 +308,31 @@ figure img {
 
 figcaption {                         /* Bildunterschrift */
 	position: absolute;
-	bottom: 0;
+	bottom: 5px;                       /* Abstand vom Boden */
 	width: 100%;
 	text-align: center;                /* Textausrichtung */
-	line-height: 1em;                  /* Höhe der Textzeile in und unter den Bildern */
-	color: white;           /* Textfarbe */
-	background: rgba(0, 0, 0, 0.5);   /* Hintergrundfarbe */
+	line-height: 1em;                  /* Höhe der Textzeile in den Bildern */
+	color: white;                      /* Textfarbe */
+	background: transparent;           /* Hintergrundfarbe */
 }
 
-.gesamt {                 /* Gesamtbildunterschrift */
-	position: relative;     /* Position */
-	color: black;           /* Textfarbe */
-	background: white;      /* Hintregrandfarbe */
+.gesamt {                            /* Gesamtbildunterschrift */
+	position: relative;                /* Position */
+	color: black;                      /* Textfarbe */
+	background: white;                 /* Hintregrundfarbe */
 }
 
 /*                                 Liste                                      */
 /*----------------------------------------------------------------------------*/
-.liste ul {                        /* Formatierung der Liste */
-  list-style: none;                /* keine Aufzählungssymbole */
-  columns: 1 12em;                 /* Anzahl Spalten und Spaltenbreite */
-  -webkit-colums: 1 12em;          /* dito für Browser */
+.liste ul {                          /* Formatierung der Liste */
+  list-style: none;                  /* keine Aufzählungssymbole */
+  columns: 1 12em;                   /* Anzahl Spalten und Spaltenbreite */
+  -webkit-colums: 1 12em;            /* dito für Browser */
 }
-.liste li {                        /* Formatierung der Zeilen in der Liste */
-  background-size: auto;           /* Größe der Zeilen */
-  margin-bottom: 0em;              /* Abstand zwischen den Zeilen */
-  text-align: left;                /* Text linksbündig */
+.liste li {                          /* Formatierung der Zeilen in der Liste */
+  background-size: auto;             /* Größe der Zeilen */
+  margin-bottom: 0em;                /* Abstand zwischen den Zeilen */
+  text-align: left;                  /* Text linksbündig */
 }
 
 /*      Text in 2 Spalten als Liste anordnen (siehe z.B. index.html)          */
@@ -343,8 +343,8 @@ figcaption {                         /* Bildunterschrift */
 }
   ul {                               /* Formatierung der Liste */
 	  list-style: none;                /* keine Aufzählungssymbole */
-    columns: 2 9em;                 /* Anzahl Spalten und Spaltenbreite */
-	  -webkit-colums: 2 9em;          /* dito für Browser */
+    columns: 2 9em;                  /* Anzahl Spalten und Spaltenbreite */
+	  -webkit-colums: 2 9em;           /* dito für Browser */
   }
   li {                               /* Formatierung der Zeilen in der Liste */
     background-size: auto;           /* Größe der Zeilen */
