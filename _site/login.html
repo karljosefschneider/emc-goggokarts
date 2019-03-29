@@ -3,16 +3,16 @@
 <script>
 'use strict';
 document.addEventListener('DOMContentLoaded', function () {
-
+    var passwort = "goggokart";
     var eingabe = "",
 	    text    = "",
         zaehler = 1;
-      while (eingabe != "intern" && zaehler < 2) {
+      while (eingabe != passwort && zaehler < 2) {
         eingabe = window.prompt("Bitte Passwort eingeben", "");
         zaehler++;
       }
 
-    if (eingabe != "intern") {
+    if (eingabe != passwort) {
       while (eingabe != "intern" && zaehler <= 3) {
         eingabe = window.prompt("Passwort " + zaehler + ". Versuch", "");
         zaehler++;
@@ -26,9 +26,6 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 </script>
-
-
-
 
 <!--
 <script language="JavaScript">
